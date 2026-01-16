@@ -1,29 +1,27 @@
-1#include <stack>
-2#include <string>
-3
-4class Solution {
-5public:
-6    string removeOuterParentheses(string s) {
-7        stack<char>st;
-8        string ans;
-9        int start = 0;
-10        int n = s.size();
-11
-12        for(int i = 0; i < n; i++){
-13            if(s[i] == '('){
-14                st.push(s[i]); //has to be '(' always
-15            }
-16            else{
-17                st.pop();
-18            }
-19
-20            if(st.empty()){ //means we encountered first decomposition at ith
-21                //we store this string from 0th to 5th and then from 5th to 9th index       
-22                ans = ans + s.substr(start + 1, i - start - 1);
-23                start = i+1;
-24            }
-25        }
-26
-27        return ans;
-28    }
-29};
+1#include <string>
+2
+3class Solution {
+4public:
+5    string removeOuterParentheses(string s) {
+6        string ans;
+7        int n = s.size();
+8        int depth = 0;
+9
+10        for(int i = 0; i < n; i++){
+11            if(s[i] == '('){
+12                if(depth > 0){
+13                    ans += s[i];
+14                }
+15                depth++;
+16            }
+17            else{
+18                if(depth > 1){
+19                    ans += s[i];
+20                }
+21                depth--;
+22            }
+23        }
+24
+25        return ans;
+26    }
+27};
