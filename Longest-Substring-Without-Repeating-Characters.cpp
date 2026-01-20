@@ -7,22 +7,24 @@
 7        int ans = 0;
 8        for(int i = 0; i < n; i++){
 9
-10            string substr = "";
-11            int hashmap[256] = {0};
-12
-13            for(int j = i; j < n; j++){
-14                substr += s[j];
-15                if(hashmap[s[j]] != 1){
-16                    int val = s[j]; //conversion to ASCII value of chars
-17                    hashmap[val] = 1;
-18                    ans = max(ans, (int)substr.size());
-19                }
-20                else{
-21                    break;
-22                }
-23            }
-24        }
-25
-26        return ans;
-27    }
-28};
+10            //string substr = "";
+11            int len = 0;
+12            int hashmap[256] = {0};
+13
+14            for(int j = i; j < n; j++){
+15                //substr += s[j];
+16                len++;
+17                if(hashmap[s[j]] != 1){
+18                    int val = s[j]; //conversion to ASCII value of chars
+19                    hashmap[val] = 1;
+20                    ans = max(ans, len);
+21                }
+22                else{
+23                    break;
+24                }
+25            }
+26        }
+27
+28        return ans;
+29    }
+30};
