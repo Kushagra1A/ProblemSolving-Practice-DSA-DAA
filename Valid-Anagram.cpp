@@ -1,19 +1,25 @@
 1class Solution {
 2public:
 3    bool isAnagram(string s, string t) {
-4        if (s.size() != t.size()) return false;
-5        //unordered_map<char,int>mpp;
-6        int freq[26] = {0};
+4        if(s.size() != t.size()){
+5            return false;
+6        }
 7
-8        for (char c : s) {
-9            freq[c - 'a']++;
-10        }
-11
-12        for (char c : t) {
-13            freq[c - 'a']--;
-14            if (freq[c - 'a'] < 0) return false;
-15        }
-16
-17        return true;
-18    }
-19};
+8        int freq[256] = {0};
+9
+10        for(int i = 0; i < s.size(); i++){
+11            int val = s[i];
+12            freq[val]++;
+13        }
+14
+15        for(int i = 0; i < t.size(); i++){
+16            int val = t[i];
+17            freq[val]--;
+18            if(freq[val] < 0){
+19                return false;
+20            }
+21        }
+22
+23        return true;
+24    }
+25};
