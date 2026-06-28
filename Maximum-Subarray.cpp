@@ -5,14 +5,18 @@
 5class Solution {
 6public:
 7    int maxSubArray(vector<int>& nums) {
-8        int curr = nums[0];
-9        int best = nums[0];
-10
-11        for (int i = 1; i < (int)nums.size(); i++) {
-12            curr = max(nums[i], curr + nums[i]);
-13            best = max(best, curr);
-14        }
-15        return best;
-16    }
-17};
+8        int n = nums.size();
+9        int sum = 0;
+10        int maxsum = INT_MIN;
+11
+12        for(int i = 0; i < n; i++){
+13            sum = sum + nums[i];
+14            maxsum = max(maxsum, sum);
+15
+16            if(sum < 0) sum = 0;
+17        }
 18
+19        return maxsum;
+20    }
+21};
+22
