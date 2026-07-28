@@ -1,0 +1,11 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/run-length-encoding/1">Run Length Encoding</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18px;">Given a string <strong>s</strong>, implement a function encode that performs run-length encoding on the string.&nbsp;</span><span style="font-size: 18px;">Run-length encoding is a form of compression where consecutive occurrences of the same character are replaced by the character followed by the count of its occurrences.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>s = aaaabbbccc
+<strong>Output: </strong>a4b3c3<strong>
+Explanation: </strong>The character 'a' repeated 4 times consecutively and 'b' 3 times, 'c' also 3 times, so answer for this test case is a4b3c3.
+</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>s = abbbcdddd
+<strong>Output: </strong>a1b3c1d4<br><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Explanation:  </strong></span><span style="font-size: 18px;">The character 'a' is</span><span style="font-size: 18px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> repeated 1 time, 'b' 3 times, 'c' 1 time and 'd' repeated 4 times, so answer for this test case is a1b3c1d4.</span></span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>s = g
+<strong>Output: </strong>g1</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ s.size() ≤ 10<sup>6</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>VMWare</code>&nbsp;<code>Zoho</code>&nbsp;<code>Amazon</code>&nbsp;<code>Microsoft</code>&nbsp;<code>FactSet</code>&nbsp;<code>Goldman Sachs</code>&nbsp;<code>CouponDunia</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Strings</code>&nbsp;
